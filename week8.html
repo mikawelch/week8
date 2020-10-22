@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Week 8</title>
+		<style>
+		
+		.sticker {
+			width: 300px;
+			height: 300px;
+		}
+		.example-1 .sticker-img {
+
+		background-image: url(https://img.cartoongoodies.com/wp-content/uploads/2019/11/07152740/Rick-Sanchez-face.png);
+		
+		}
+		
+		
+		</style>
+		 <script type="text/javascript" src="sticker.js"></script>
+		
+		
+	</head>
+
+	<body>
+	<img id="image" src="">
+	
+	<script>
+
+		var url = "https://rickandmortyapi.com/api/character/2";
+		
+		
+		fetch(url).then(function(response){
+		console.log(response);
+		return response.json();
+		
+		}).then(function(jsonData) {
+		console.log(jsonData);
+		
+		image.src =  jsonData.image;
+		});
+		
+	  Sticker.init('.sticker');
+	
+	
+	</script>
+	
+	<div class="sticker example-1"></div>
+
+
+	
+	
+	
+	</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
